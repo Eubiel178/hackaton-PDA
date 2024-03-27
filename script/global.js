@@ -1,0 +1,62 @@
+const header = document.createElement("header");
+header.classList.add("header");
+header.innerHTML = `
+    <h1 class="logo">
+        <a href="index.html">Logo</a>
+    </h1>
+
+    <button id="menu-button" class="menu-button">
+        <img src="/assets/icon/menu.svg" alt="menu icon"/>
+    </button>
+
+   <nav id="nav-container" class="nav-container">
+        <h2 class="nav-title">Mapa do Site  
+            <button id="close-nav" class="close-nav">
+                <img src="/assets/icon/close.svg" alt="close icon"/>
+            </button>
+        </h2>
+        
+        <ul id="menu" class="menu">
+
+            <li class="menu-item">
+                <a href="index.html">Home</a>
+            </li>
+
+            <li id="dropdown" class="menu-item">
+                Barragens
+
+                <div id="drop" class="drop">
+                    <a class="drop-item" href="brumadinho.html">Brumadinho</a>
+                    <a class="drop-item" href="maceio.html">Maceio</a>
+                    <a class="drop-item" href="mariana.html">Mariana</a>
+                </div>
+            </li>
+
+            
+            <li class="menu-item">
+                <a href="apoie.html">Apoie</a>
+            </li>
+        </ul>
+   </nav>
+`;
+
+const dropdownButton = document.body.insertBefore(
+  header,
+  document.body.firstChild
+);
+
+const openNav = document.getElementById("menu-button");
+const closeNav = document.getElementById("close-nav");
+const navContainer = document.getElementById("nav-container");
+const dropdown = document.getElementById("dropdown");
+const headerDrop = document.getElementById("drop");
+
+dropdown.addEventListener("click", function () {
+  return headerDrop.classList.toggle("drop-active");
+});
+openNav.addEventListener("click", function () {
+  return navContainer.classList.add("menu-mobile-active");
+});
+closeNav.addEventListener("click", function () {
+  return navContainer.classList.remove("menu-mobile-active");
+});
