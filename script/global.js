@@ -17,13 +17,12 @@ header.innerHTML = `
         </h2>
         
         <ul id="menu" class="menu">
-
             <li class="menu-item">
                 <a href="index.html">Home</a>
             </li>
 
             <li id="dropdown" class="menu-item">
-                Barragens
+                <span>Barragens</span>
 
                 <div id="drop" class="drop">
                     <a class="drop-item" href="brumadinho.html">Brumadinho</a>
@@ -40,10 +39,71 @@ header.innerHTML = `
    </nav>
 `;
 
-const dropdownButton = document.body.insertBefore(
-  header,
-  document.body.firstChild
-);
+const footer = document.createElement("footer");
+footer.innerHTML = `
+  <footer>
+    <div class="contact-info">
+      <h3>Entre em Contato</h3>
+
+      <ul>
+        <li class="contact-item">
+          <img
+            class="contact-icon"
+            src="/assets/icon/email.png"
+            alt="Email icone"
+          />
+          Email: contato@exemplo.com
+        </li>
+
+        <li class="contact-item">
+          <img
+            class="contact-icon"
+            src="/assets/icon/phone.png"
+            alt="Telefone icone"
+          />
+          Telefone: (00) 1234-5678
+        </li>
+
+        <li class="contact-item">
+          <img
+            class="contact-icon"
+            src="/assets/icon/address.png"
+            alt="Localização icone"
+          />
+          Endereço: Rua Exemplo, 1234
+        </li>
+      </ul>
+    </div>
+
+    <div class="social-media">
+      <h3>Nos Siga</h3>
+
+      <ul>
+        <li class="social-item">
+          <img
+            class="contact-icon"
+            src="/assets/icon/facebook.svg"
+            alt="Facebook logo"
+          />
+
+          <a href="#">Facebook</a>
+        </li>
+
+        <li class="social-item">
+          <img
+            class="contact-icon"
+            src="/assets/icon/instagram.svg"
+            alt="Instagram logo"
+          />
+
+          <a href="#">Instagram</a>
+        </li>
+      </ul>
+    </div>
+  </footer>`;
+
+document.body.insertBefore(header, document.body.firstChild);
+document.body.appendChild(footer);
 
 const openNav = document.getElementById("menu-button");
 const closeNav = document.getElementById("close-nav");
