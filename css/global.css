@@ -92,9 +92,11 @@ body {
 }
 
 footer {
-  background-color: #333;
-  color: #fff;
   text-align: center;
+
+  color: #fff;
+  background-color: #333;
+
   padding: 20px 10px;
 }
 

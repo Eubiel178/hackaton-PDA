@@ -1,14 +1,14 @@
 main {
   max-width: 800px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 40px 20px;
 }
 
 .title-main {
-  font-size: 2rem;
   color: #333;
   text-align: center;
-  margin-top: 20px;
+  font-size: 2rem;
+
   margin-bottom: 20px;
 }
 
