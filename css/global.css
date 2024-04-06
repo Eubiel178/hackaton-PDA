@@ -4,17 +4,19 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   overflow: hidden;
   overflow-y: auto;
-  height: 100dvh;
-  height: 100vh;
+  height: 92dvh;
+  height: 92vh;
 }
 
 .header {
   color: #fff;
-  padding: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: #333;
+  height: 8vh;
 }
 
 .logo {
