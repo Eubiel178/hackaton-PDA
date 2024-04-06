@@ -1,13 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <script src="script/global.js" defer></script>
+    <script src="script/apoie.js" defer></script>
+
     <link rel="stylesheet" href="css/global.css" />
     <link rel="stylesheet" href="css/apoie.css" />
 
-    <title>Document</title>
+    <title>Apoie Sobreviventes de Barragens</title>
   </head>
-  <body></body>
+  <body>
+    <main>
+      <h1 class="title-main">Apoie Sobreviventes de Barragens</h1>
+
+      <section class="support-section">
+        <p class="support-description">
+          Sua ajuda pode fazer a diferença na vida das pessoas afetadas por
+          tragédias de barragens. Veja como você pode contribuir para o apoio
+          aos sobreviventes:
+        </p>
+
+        <ul class="support-list">
+          <li class="support-item">
+            Faça doações para fundos de assistência aos sobreviventes.
+          </li>
+
+          <li class="support-item">
+            Ofereça voluntariado em programas de recuperação e reconstrução.
+          </li>
+
+          <li class="support-item">
+            Participe de campanhas de conscientização sobre segurança de
+            barragens.
+          </li>
+
+          <li class="support-item">
+            Advogue por políticas e regulamentações mais rigorosas para prevenir
+            futuras tragédias.
+          </li>
+        </ul>
+
+        <form id="donate-form" class="donate-form">
+          <div class="form-group">
+            <label for="name">Nome:</label>
+
+            <input type="text" id="name" name="name" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email:</label>
+
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <div class="form-group">
+            <label for="amount">Valor da Doação:</label>
+
+            <input type="number" id="amount" name="amount" min="1" required />
+          </div>
+
+          <button type="submit" class="donate-button">
+            Faça uma doação agora
+          </button>
+        </form>
+
+        <div id="message" class="message"></div>
+      </section>
+    </main>
+  </body>
 </html>
