@@ -6,52 +6,50 @@ class Apoie {
     this.message = document.getElementById("message");
   }
 
+  formatAmount() {
+    return this.amount.value.toLocaleString("pt-BR", {
+      style: "currency",
+      currency: "BRL",
+    });
+  }
+
   validate() {
-    if (this.name.value.trim().length <= 0) {
-      this.message.innerHTML = "Digite um nome válido";
-      this.message.classList.add("error");
+    clearTimeout();
+    const fields = [this.name, this.email, this.amount];
 
-      // remove 'error' class after 3 secs
-      setTimeout(() => {
-        this.message.innerHTML = "";
-        this.message.classList.remove("error");
-      }, 3000);
-      return false;
-    } else if (this.email.value.trim().length <= 0) {
-      this.message.innerHTML = "Digite um email válido";
-      this.message.classList.add("error");
+    const isError = fields.map((field) => {
+      if (field.value.trim().length <= 0) {
+        this.message.innerText = "Preencha todos os campos";
+        this.message.classList.add("error");
+        field.classList.add("input-error");
 
-      // remove 'error' class after 3 secs
-      setTimeout(() => {
-        this.message.innerHTML = "";
-        this.message.classList.remove("error");
-      }, 3000);
-      return false;
-    } else if (
-      this.amount.value.trim().length <= 0 ||
-      parseInt(this.amount.value) <= 0
-    ) {
-      this.message.innerHTML = "Digite uma quantia válido";
-      this.message.classList.add("error");
+        // remove 'error' class after 3 secs
+        setTimeout(() => {
+          this.message.classList.remove("error");
+          this.message.innerText = "";
+        }, 3000);
 
-      // remove 'error' class after 3 secs
-      setTimeout(() => {
-        this.message.innerHTML = "";
-        this.message.classList.remove("error");
-      }, 3000);
-    }
-    return true;
+        return false;
+      }
+
+      field.classList.remove("input-error");
+      return true;
+    });
+
+    return !isError.includes(false);
   }
 
   send() {
     if (this.validate()) {
-      this.message.innerHTML = "Doação enviada com sucesso!";
+      this.message.innerText = `Obrigado, ${
+        this.name.value
+      }! Sua doação de R$ ${this.formatAmount()},00 foi recebida com sucesso.`;
       this.message.classList.add("success");
 
       // remove 'success' class after 3 secs
       setTimeout(() => {
-        this.message.innerHTML = "";
         this.message.classList.remove("success");
+        this.message.innerText = "";
       }, 3000);
     }
   }
@@ -62,6 +60,6 @@ document
   .getElementById("donate-form")
   .addEventListener("submit", function (event) {
     event.preventDefault();
-    apoie = new Apoie();
+    const apoie = new Apoie();
     apoie.send();
   });
