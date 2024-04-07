@@ -80,3 +80,13 @@ main {
 .input-error {
   border-color: red !important;
 }
+
+@media (max-width: 480px) {
+  .title-main {
+    font-size: 1.5rem;
+  }
+
+  .tragedy-title {
+    font-size: 1.1rem;
+  }
+}
