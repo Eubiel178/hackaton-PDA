@@ -55,11 +55,27 @@ main {
 }
 
 .message {
-  color: #4caf50;
+  display: none;
+}
+
+.error {
+  display: block !important;
+  color: white;
 
   margin-top: 20px;
   padding: 10px;
   border-radius: 5px;
 
-  display: none;
+  background-color: rgba(255, 0, 0, 0.7);
+}
+
+.success {
+  display: block !important;
+  color: white;
+
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 5px;
+
+  background-color: rgba(0, 128, 0, 0.7);
 }
