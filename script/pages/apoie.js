@@ -7,7 +7,7 @@ class Apoie {
   }
 
   formatAmount() {
-    return this.amount.value.toLocaleString("pt-BR", {
+    return parseFloat(this.amount.value).toLocaleString("pt-BR", {
       style: "currency",
       currency: "BRL",
     });
@@ -43,7 +43,7 @@ class Apoie {
     if (this.validate()) {
       this.message.innerText = `Obrigado, ${
         this.name.value
-      }! Sua doação de R$ ${this.formatAmount()},00 foi recebida com sucesso.`;
+      }! Sua doação de ${this.formatAmount()} foi recebida com sucesso.`;
       this.message.classList.add("success");
 
       // remove 'success' class after 3 secs
@@ -56,6 +56,7 @@ class Apoie {
 }
 
 // get donate-form and check for submit event
+
 document
   .getElementById("donate-form")
   .addEventListener("submit", function (event) {
