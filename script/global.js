@@ -22,7 +22,7 @@ header.innerHTML = `
             </li>
 
             <li id="dropdown" class="menu-item">
-                <span>Barragens</span>
+                <span>Tragédias</span>
 
                 <div id="drop" class="drop">
                     <a class="drop-item" href="brumadinho.html">Brumadinho</a>
