@@ -146,13 +146,13 @@ footer {
   }
 
   .nav-container {
-    transform: translateX(200%);
     transition: all 0.3s ease;
 
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
+    transform: translateX(200%);
 
     align-items: center;
     flex-direction: column;
