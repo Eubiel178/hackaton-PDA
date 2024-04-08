@@ -6,6 +6,7 @@
 
     <script src="script/global.js" defer></script>
     <script src="script/index.js" defer></script>
+    <script src="script/carousel.js" defer></script>
 
     <link
       rel="stylesheet"
@@ -13,12 +14,49 @@
     />
     <link rel="stylesheet" href="css/global.css" />
     <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/carousel.css" />
 
     <title>Tragédias de Barragens</title>
   </head>
 
   <body>
     <main>
+      <!-- CAROUSEL -->
+      <div class="carousel-container">
+        <!-- <button class="left-arrow control">
+          <i class="fa-solid fa-less-than" aria-label="previous image"></i>
+
+        </button>
+        <button class="right-arrow control">
+          <i class="fa-solid fa-greater-than" aria-label="next image"></i>
+
+        </button> -->
+        <div class="gallery-wrapper">
+          <div class="gallery">
+            <div class="gallery-item">
+              <img
+                src="assets/images/brumadinho.jpg"
+                alt="Brumadinho"
+                class="gallery-image current-image"
+              />
+            </div>
+            <div class="gallery-item">
+              <img
+                src="assets/images/mariana.jpg"
+                alt="Mariana"
+                class="gallery-image"
+              />
+            </div>
+            <div class="gallery-item">
+              <img
+                src="assets/images/maceio.jpg"
+                alt="Maceió"
+                class="gallery-image"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
       <h1 class="title-main">Tragédias de Barragens</h1>
 
       <section class="tragedy-section">
@@ -78,5 +116,8 @@
         <a href="apoie.html" class="support-link">Saiba como ajudar</a>
       </section>
     </main>
+
+    <!-- FONT AWESOME -->
+    <script src="https://kit.fontawesome.com/c90fd5a128.js" crossorigin="anonymous"></script>
   </body>
 </html>

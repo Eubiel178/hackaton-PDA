@@ -1,0 +1,58 @@
+.carousel-container {
+    position: relative;
+    padding: 0.9375em;
+    max-width: 40em;
+    margin: 0 auto;
+}
+
+.gallery-wrapper {
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.gallery {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.left-arrow, .right-arrow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: auto;
+    font-size: 3em;
+    line-height: 15.625em;
+    width: 2.5em;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    color: gainsboro;
+    cursor: pointer;
+    border: none;
+    background: linear-gradient(to left, transparent 0%, black 200%);
+    opacity: 0.1;
+    transition: all 0.4s ease-in-out;
+}
+
+.right-arrow {
+    left: auto;
+    right: 0;
+    background: linear-gradient(to right, transparent 0%, black 200%);
+}
+
+.left-arrow:hover, .right-arrow:hover {
+    opacity: 1;
+}
+
+.gallery-image {
+    width: 40em;
+    height: 20em;
+    flex-shrink: 0;
+    opacity: 0.6;
+    transition: all 0.4s ease-in-out;
+}
+
+.current-image {
+    opacity: 1;
+}
