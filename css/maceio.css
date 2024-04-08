@@ -1,5 +1,8 @@
 .main {
     height: 92vh;
+    max-width: 50em;
+    margin: 0 auto;
+    padding: 2.5em 1.25em;
 }
 
 h2 {
@@ -22,6 +25,36 @@ h4 {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
-    border: 1px solid black;
+    gap: 1.25em;
+    border: 0.06em solid black;
+}
+  
+.title-main {
+    color: black;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1.25em;
+}
+
+.tragedy-description-section {
+    margin-top: 1.5em;
+    margin-bottom: 1.875em;
+}
+
+.tragedy-description-title {
+    color: #333333;
+    font-size: 1.25rem;
+    margin-bottom: 0.625em;
+    font-weight: 700;
+    display: inline-block;
+}
+p {
+    color: #333333;
+    font-size: 1rem;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    text-align: justify;
+    margin-bottom: 0.06em;
 }
