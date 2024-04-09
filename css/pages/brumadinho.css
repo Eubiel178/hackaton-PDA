@@ -1,0 +1,32 @@
+main {
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.secao img {
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
+  margin: 0 auto 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.secao h2 {
+  font-weight: bold;
+}
+
+.secao p {
+  white-space: normal;
+}
+
+.secao img {
+  max-width: 50%;
+  height: auto;
+  display: block;
+  margin: 0 auto 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
