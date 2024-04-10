@@ -2,9 +2,8 @@
   display: flex;
   align-items: center;
 
-  margin: 0 auto;
+  margin: 0 auto 15px;
 
-  padding: 15px;
   max-width: 640px;
 }
 
@@ -19,9 +18,9 @@
 
 .left-arrow,
 .right-arrow {
-  font-size: 3em;
+  font-size: 40px;
   color: red;
-  opacity: 0.1;
+  opacity: 0.3;
   transition: all 0.4s ease-in-out;
 }
 
@@ -39,4 +38,28 @@
 
 .current-image {
   opacity: 1;
+}
+
+@media (max-width: 500px) {
+  .left-arrow,
+  .right-arrow {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .left-arrow,
+  .right-arrow {
+    position: absolute;
+    opacity: 1;
+    z-index: 22;
+  }
+
+  .left-arrow {
+    left: 10px;
+  }
+
+  .right-arrow {
+    right: 10px;
+  }
 }
