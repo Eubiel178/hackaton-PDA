@@ -2,38 +2,41 @@ const header = document.createElement("header");
 header.classList.add("header");
 header.innerHTML = `
     <h1 class="logo">
-        <a href="index.html">Logo</a>
+        <a href="/index.html">Logo</a>
     </h1>
 
     <button id="menu-button" class="menu-button">
-        <img src="/assets/icon/menu.svg" alt="menu icon"/>
+        <img src="../assets/icon/menu.svg" alt="menu icon"/>
     </button>
 
    <nav id="nav-container" class="nav-container">
         <h2 class="nav-title">Mapa do Site  
             <button id="close-nav" class="close-nav">
-                <img src="/assets/icon/close.svg" alt="close icon"/>
+                <img src="../assets/icon/close.svg" alt="close icon"/>
             </button>
         </h2>
         
         <ul id="menu" class="menu">
             <li class="menu-item">
-                <a href="index.html">Home</a>
+                <a href="/index.html">Home</a>
             </li>
 
             <li id="dropdown" class="menu-item">
                 <span>Tragédias</span>
 
                 <div id="drop" class="drop">
-                    <a class="drop-item" href="brumadinho.html">Brumadinho</a>
-                    <a class="drop-item" href="maceio.html">Maceio</a>
-                    <a class="drop-item" href="mariana.html">Mariana</a>
+                    <a class="drop-item" href="../pages/brumadinho.html">Brumadinho</a>
+                    <a class="drop-item" href="../pages/maceio.html">Maceio</a>
+                    <a class="drop-item" href="../pages/mariana.html">Mariana</a>
                 </div>
             </li>
 
+            <li class="menu-item">
+              <a href="../pages/quiz-geral.html">Quiz</a>
+            </li>
             
             <li class="menu-item">
-                <a href="voluntario.html">Seja um Voluntário</a>
+                <a href="../pages/voluntario.html">Seja um Voluntário</a>
             </li>
         </ul>
    </nav>
@@ -49,7 +52,7 @@ footer.innerHTML = `
         <li class="contact-item">
           <img
             class="contact-icon"
-            src="/assets/icon/email.png"
+            src="../assets/icon/email.png"
             alt="Email icone"
           />
           Email: contato@exemplo.com
@@ -58,7 +61,7 @@ footer.innerHTML = `
         <li class="contact-item">
           <img
             class="contact-icon"
-            src="/assets/icon/phone.png"
+            src="../assets/icon/phone.png"
             alt="Telefone icone"
           />
           Telefone: (00) 1234-5678
@@ -67,7 +70,7 @@ footer.innerHTML = `
         <li class="contact-item">
           <img
             class="contact-icon"
-            src="/assets/icon/address.png"
+            src="../assets/icon/address.png"
             alt="Localização icone"
           />
           Endereço: Rua Exemplo, 1234
@@ -82,7 +85,7 @@ footer.innerHTML = `
         <li class="social-item">
           <img
             class="contact-icon"
-            src="/assets/icon/facebook.svg"
+            src="../assets/icon/facebook.svg"
             alt="Facebook logo"
           />
 
@@ -92,7 +95,7 @@ footer.innerHTML = `
         <li class="social-item">
           <img
             class="contact-icon"
-            src="/assets/icon/instagram.svg"
+            src="../assets/icon/instagram.svg"
             alt="Instagram logo"
           />
 

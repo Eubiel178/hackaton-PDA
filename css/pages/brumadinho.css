@@ -21,9 +21,6 @@
   margin-bottom: 10px;
 }
 
-.box-content p {
-}
-
 @media (max-width: 500px) {
   .box-content img {
     max-width: 350px;

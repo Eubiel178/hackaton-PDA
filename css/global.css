@@ -1,4 +1,4 @@
-@import url('reset.css');
+@import url("reset.css");
 
 html {
   scroll-behavior: smooth;
@@ -16,6 +16,12 @@ body {
 
   min-height: 100vh;
   min-height: 100dvh;
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
 }
 
 .header {
@@ -152,6 +158,7 @@ footer {
     top: 0;
     right: 0;
     bottom: 0;
+    z-index: 999;
     transform: translateX(200%);
 
     align-items: center;

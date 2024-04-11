@@ -1,13 +1,15 @@
-const quiz = document.getElementById('quiz');
-const countQuestion = document.getElementById('count-question');
-const tittleNumberOfQuestion = document.getElementById('tol-num-que');
-const questionNumber = document.getElementById('question-number');
-const questionTitle = document.getElementById('question');
-const answerLable = document.querySelectorAll('.answer-lable');
-const nextQuestionButton = document.getElementById('next-question-btn');
-const submitQuizButton = document.getElementById('submit-button');
-const resultElement = document.getElementById('result');
-const scoreElement = document.getElementById('score');
+import { quizData } from "./question-quiz.js";
+
+const quiz = document.getElementById("quiz");
+const countQuestion = document.getElementById("count-question");
+const tittleNumberOfQuestion = document.getElementById("tol-num-que");
+const questionNumber = document.getElementById("question-number");
+const questionTitle = document.getElementById("question");
+const answerLable = document.querySelectorAll(".answer-lable");
+const nextQuestionButton = document.getElementById("next-question-btn");
+const submitQuizButton = document.getElementById("submit-button");
+const resultElement = document.getElementById("result");
+const scoreElement = document.getElementById("score");
 
 const allInputs = document.querySelectorAll("input[type='radio']");
 
@@ -33,8 +35,8 @@ const loadQuiz = () => {
   reset();
 
   if (currentQuestion == quizData.length - 1) {
-    nextQuestionButton.style.display = 'none';
-    submitQuizButton.style.display = 'block';
+    nextQuestionButton.style.display = "none";
+    submitQuizButton.style.display = "block";
   }
 };
 
@@ -67,13 +69,13 @@ const submitQuizClickHandler = () => {
 
   currentQuestion++;
   if (answer) {
-    quiz.style.display = 'none';
-    resultElement.style.display = 'block';
+    quiz.style.display = "none";
+    resultElement.style.display = "block";
     scoreElement.textContent = `Perguntas respondidas corretamente ${correctAnswers} / ${quizData.length}`;
   }
 };
 
-nextQuestionButton.addEventListener('click', nextQuestionClickHandler);
-submitQuizButton.addEventListener('click', submitQuizClickHandler);
+nextQuestionButton.addEventListener("click", nextQuestionClickHandler);
+submitQuizButton.addEventListener("click", submitQuizClickHandler);
 
 loadQuiz();
