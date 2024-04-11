@@ -14,8 +14,14 @@ body {
   overflow: hidden;
   overflow-y: auto;
 
-  min-height: 100vh;
-  min-height: 100dvh;
+  height: 100dvh;
+  height: 100vh;
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
 }
 
 .header {
@@ -27,6 +33,7 @@ body {
   justify-content: space-between;
   background-color: #333;
   height: 8vh;
+  z-index: 999;
 }
 
 .logo {
@@ -152,6 +159,7 @@ footer {
     top: 0;
     right: 0;
     bottom: 0;
+    z-index: 999;
     transform: translateX(200%);
 
     align-items: center;

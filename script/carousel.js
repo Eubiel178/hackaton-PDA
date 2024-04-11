@@ -1,26 +1,63 @@
-const controls = document.querySelectorAll(".control");
+const buttonPrev = document.getElementById("prev");
+const buttonNext = document.getElementById("next");
 const images = document.querySelectorAll(".gallery-image");
 const maxItems = images.length;
 let currentItem = 0;
 
-// automically change img every 5 seconds (start on screen load)
+function isVisible(element) {
+  const position = element.getBoundingClientRect();
+  const start = position.top;
+  const end = position.bottom;
+
+  if (start >= 0 && end <= window.innerHeight) {
+    return true;
+  }
+
+  return false;
+}
+
+function switchImage() {
+  clearInterval();
+
+  images.forEach((image) => {
+    image.classList.remove("current-image");
+  });
+
+  images[currentItem].classList.add("current-image");
+
+  images[currentItem].scrollIntoView({
+    behavior: "smooth",
+    inline: "start",
+    block: "nearest",
+  });
+}
+
+buttonNext.addEventListener("click", () => {
+  if (currentItem < maxItems - 1) {
+    currentItem++;
+
+    switchImage();
+  }
+});
+
+buttonPrev.addEventListener("click", () => {
+  if (currentItem > 0) {
+    currentItem--;
+
+    switchImage();
+  }
+});
+
 window.onload = () => {
   setInterval(() => {
-    // check page offset
-    currentItem++;
-    if (currentItem >= maxItems) {
-      currentItem = 0;
+    if (isVisible(images[currentItem])) {
+      currentItem++;
+
+      if (currentItem >= maxItems) {
+        currentItem = 0;
+      }
+
+      switchImage();
     }
-    // remove 'current-image' class from all images
-    images.forEach((image) => {
-      image.classList.remove("current-image");
-    });
-    // add 'current-image' class to current image
-    images[currentItem].classList.add("current-image");
-    images[currentItem].scrollIntoView({
-      behavior: "smooth",
-      inline: "start",
-      block: "nearest",
-    });
   }, 5000);
 };
