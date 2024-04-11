@@ -1,5 +1,5 @@
 .main {
-    height: 92vh;
+    height: 100%;
     max-width: 50em;
     margin: 0 auto;
     padding: 2.5em 1.25em;
@@ -47,7 +47,7 @@ h4 {
     font-size: 1.25rem;
     margin-bottom: 0.625em;
     font-weight: 700;
-    display: inline-block;
+    display: block;
 }
 p {
     color: #333333;
@@ -57,4 +57,18 @@ p {
     padding: 0;
     text-align: justify;
     margin-bottom: 0.06em;
+}
+
+.donate {
+    text-decoration: none;
+    color: green;
+    font-size: 1.01rem;
+}
+
+.donate:visited {
+    text-decoration: none;
+}
+
+.donate:hover {
+    font-weight: 600;
 }
