@@ -8,14 +8,6 @@ const nextQuestionButton = document.getElementById('next-question-btn');
 const submitQuizButton = document.getElementById('submit-button');
 const resultElement = document.getElementById('result');
 const scoreElement = document.getElementById('score');
-const quizWrapper = document.querySelector('.quiz-wrapper');
-const showQuizButton = document.getElementById('show-quiz-btn');
-
-showQuizButton.addEventListener('click', function () {
-  quizWrapper.style.display = 'block'; // Mostra o quiz
-  this.style.display = 'none'; // Esconde o botão
-  loadQuiz(); // Carrega a primeira questão do quiz
-});
 
 const allInputs = document.querySelectorAll("input[type='radio']");
 
@@ -71,19 +63,17 @@ const nextQuestionClickHandler = () => {
 
 const submitQuizClickHandler = () => {
   let answer = getSelected();
+  if (checkPassword(answer)) correctAnswers++;
+
+  currentQuestion++;
   if (answer) {
-    if (checkPassword(answer)) correctAnswers++;
-    currentQuestion++;
-    if (currentQuestion < quizData.length) {
-      loadQuiz();
-    } else {
-      quizWrapper.style.display = 'none'; // Esconde o quiz
-      resultElement.style.display = 'block'; // Mostra o resultado
-      scoreElement.textContent = `Perguntas respondidas corretamente ${correctAnswers} / ${quizData.length}`;
-    }
+    quiz.style.display = 'none';
+    resultElement.style.display = 'block';
+    scoreElement.textContent = `Perguntas respondidas corretamente ${correctAnswers} / ${quizData.length}`;
   }
 };
 
 nextQuestionButton.addEventListener('click', nextQuestionClickHandler);
 submitQuizButton.addEventListener('click', submitQuizClickHandler);
+
 loadQuiz();

@@ -1,6 +1,6 @@
 :root {
-  --primary-color: #6c42ff;
-  --secondary-color: #19f466;
+  --primary-color: #005792; /* Azul escuro */
+  --secondary-color: #ffa500; /* Laranja */
 
   --border-width: 2px;
 
@@ -21,7 +21,7 @@
   width: 100%;
   min-height: 100vh;
   padding: 15px;
-  background-color: #4b204b;
+  background-color: #204b29;
   display: flex;
   justify-content: center;
   align-items: center;
