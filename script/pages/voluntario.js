@@ -67,6 +67,8 @@ class Voluntario {
       alert(
         `Enviado com sucesso, em breve entraremos em contato pelo email ${this.email.value} ou pelo telefone ${this.phone.value}`
       );
+
+      return true;
     }
   }
 }
@@ -76,7 +78,8 @@ document
   .addEventListener("submit", function (event) {
     event.preventDefault();
     const voluntario = new Voluntario(storage);
-    voluntario.send();
 
-    event.target.reset();
+    if (voluntario.send()) {
+      event.target.reset();
+    }
   });
